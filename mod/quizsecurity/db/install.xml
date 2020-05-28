@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<XMLDB PATH="mod/quizsecurity/db" VERSION="20180719" COMMENT="XMLDB file for Moodle mod/quizsecurity"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="../../../lib/xmldb/xmldb.xsd"
+>
+  <TABLES>
+    <TABLE NAME="quizsecurity" COMMENT="The settings for each quizsecurity.">
+      <FIELDS>
+        <FIELD NAME="id" TYPE="int" LENGTH="10" NOTNULL="true" SEQUENCE="true" COMMENT="quizsecurity security id"/>
+        <FIELD NAME="pic_link" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="pic path"/>
+        <FIELD NAME="vid_link" TYPE="char" LENGTH="255" NOTNULL="true" SEQUENCE="false" COMMENT="video path"/>
+      </FIELDS>
+      <KEYS>
+        <KEY NAME="primary" TYPE="primary" FIELDS="id"/>
+      </KEYS>
+      <INDEXES>
+        <INDEX NAME="pic_link" UNIQUE="true" FIELDS="pic_link"/>
+        <INDEX NAME="vid_link" UNIQUE="true" FIELDS="vid_link"/>
+      </INDEXES>
+    </TABLE>
+  </TABLES>
+</XMLDB>
